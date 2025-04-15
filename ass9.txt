@@ -1,0 +1,41 @@
+main.rb
+
+
+
+require 'mail'
+
+# Set up SMTP settings
+Mail.defaults do
+  delivery_method :smtp, {
+    address: 'smtp.gmail.com',
+    port: 587,
+    user_name: 'stealth2622@gmail.com',
+    password: 'lazf iuiv ajxe vjxd',
+    authentication: :login,
+    enable_starttls_auto: true
+  }
+end
+
+# Define email message
+message = Mail.new do
+  from 'stealth2622@gmail.com'
+  to 'mansi.rokade22@pccoepune.org'
+  subject 'Hello from Ruby!'
+  body 'This is a test email sent from Mansi Rokade through ruby'
+end
+
+# Send email
+message.deliver!
+
+
+
+
+
+
+gemfile
+
+
+
+
+source 'https://rubygems.org'
+gem 'mail'
